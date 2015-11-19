@@ -9,6 +9,9 @@ buildscript {
 
         // ここを追加
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+
+        // Jitpack.ioで配布するのに必要
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
     }
 }
 

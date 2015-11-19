@@ -6,12 +6,6 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
 
-    // 以下追加
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
-    }
-
     defaultConfig {
         applicationId "com.kobakei.modelloggerexample"
         minSdkVersion 15

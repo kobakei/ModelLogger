@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
 // ここを追加
 apply plugin: 'android-apt'
+// for Jitpack
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.kobakei'
 
 android {
     compileSdkVersion 23
