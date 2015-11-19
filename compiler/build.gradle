@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+// ここを追加
+targetCompatibility = JavaVersion.VERSION_1_7
+sourceCompatibility = JavaVersion.VERSION_1_7
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 以下を追加
+    compile project(':library')
+    compile 'com.squareup:javapoet:1.2.0'
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+}
+
+// ここを追加
+// libaryモジュールのソースもcompilerで使うため
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java', '../library/src/main/java']
+        }
+    }
+}
